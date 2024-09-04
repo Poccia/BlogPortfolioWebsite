@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #E6EFEC;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu de navegação */
+
+nav {
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav li {
+    /* Define o espaçamento entre os itens da lista */
+    margin: 0 10px;
+}
+
+nav a {
+    font-family: 'Varta', sans-serif;
+    font-weight: 600;
+    color: #212131;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Primeira página da Home */
+
+.principal-section {
+    background-color: #E6EFEC;
+    min-height: 100vh;
+    /* Garante que a seção principal ocupe a tela inteira */
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-left: 30px;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.greeting,
+.name {
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 3rem;
+    color: #212131;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 0.5;
+    text-align: right;
+}
+
+/* Seção "Últimas Publicações" */
+
+.latest-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.latest-posts-title {
+    padding: 5px;
+    font-family: 'Yaldevi', sans-serif;
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: -10px;
+    grid-column: span 3;
+    /* Isso garante que o título ocupe a largura dos três blocos */
+    color: #212131;
+    /* Cor do texto */
+}
+
+.post {
+    background-color: #F3F7F6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /*max-height: 115px;*/
+    overflow: hidden;
+}
+
+.post-title {
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 0px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.post-content {
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Segunda página da Home */
+
+.second-section {
+    /* Estilos para a seção onde os blocos vão ficar */
+    padding: 20px;
+    background-color: #f5e0b7; /* Cor de fundo da seção, personalizar */
+}
+
+#curriculum-container {
+    /* Estilos para o container de todos os blocos */
+    display: grid;
+    grid-gap: 20px;
+    max-height: 100%; /* Ajustar a altura máxima desejada */
+    margin: 1%;
+    overflow-y: auto;
+}
+
+.curriculum-block {
+    /* Estilos básicos para cada bloco */
+    background-color: #fff; /* Cor de fundo dos blocos */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.curriculum-title {
+    /* Estilos para o título do bloco */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.curriculum-institution {
+    /* Estilos para a instituição ou empresa */
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.curriculum-dates {
+    /* Estilos para as datas */
+    font-size: 1em;
+    color: #999;
+}
