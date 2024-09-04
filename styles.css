@@ -139,11 +139,44 @@ nav a {
 #curriculum-container {
     /* Estilos para o container de todos os blocos */
     display: grid;
-    grid-gap: 20px;
     max-height: 100%; /* Ajustar a altura máxima desejada */
-    margin: 1%;
-    overflow-y: auto;
+    /* centralizar filhos horizontalmente */
+    margin: 0 auto;
+    /* mude o 400px pra alterar o tamanho das colunas*/
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    /* esconder bordas maiores que o grid */
+    overflow: hidden;
 }
+
+
+.curriculum-type {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    /* necessário para que o position:absolute dos 
+    pseudoelementos funcionem */
+    position: relative;
+}
+
+.curriculum-type::before {
+   content: '';
+   position: absolute;
+   background-color: gray;;
+   z-index: 1;
+}
+
+
+.curriculum-type::before {
+  inline-size: 2px;
+  block-size: 100vh;
+  /* metade do gap do grid para que a linha fique entre as colunas */
+  /* negativo para que a linha fique à esquerda da coluna */
+  /* a borda da primeira coluna está à esquerda,
+     porém escondida pelo overflow:hidden do grid*/
+  inset-inline-start: -0.5rem;
+}
+
 
 .curriculum-block {
     /* Estilos básicos para cada bloco */
@@ -151,6 +184,7 @@ nav a {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
+    margin-top: 10px;
 }
 
 .curriculum-title {
