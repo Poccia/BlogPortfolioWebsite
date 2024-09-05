@@ -142,8 +142,8 @@ nav a {
     max-height: 100%; /* Ajustar a altura máxima desejada */
     /* centralizar filhos horizontalmente */
     margin: 0 auto;
-    /* mude o 400px pra alterar o tamanho das colunas*/
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* mude o 300px pra alterar o tamanho das colunas*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 1fr;
     gap: 1rem;
     /* esconder bordas maiores que o grid */

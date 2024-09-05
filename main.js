@@ -11,11 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("curriculum-container");
 
   // listar os `type` do `curriculumData`
-  const types = curriculumData.map((item) => item.type);
-  const uniqueTypes = [...new Set(types)]; // ['education', 'experience', 'voluntary', 'acknowledgement']
+  const uniqueTypes = [];
+  curriculumData.forEach((item) => {
+    if (uniqueTypes.includes(item.type)) {
+      return;
+    }
 
-  // criar um bloco para cada type
-  const typeBlocks = uniqueTypes.map((type) => {
+    uniqueTypes.push(item.type);
+  });
+
+  uniqueTypes.forEach((type) => {
     const element = document.createElement("div");
     element.classList.add("curriculum-type");
     element.id = type;
@@ -24,13 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     title.textContent = typeTranslations[type];
 
     element.appendChild(title);
-
-    return element;
-  });
-
-  // colocar cada tipo no container
-  typeBlocks.forEach((block) => {
-    container.appendChild(block);
+    container.appendChild(element);
   });
 
   curriculumData.forEach((item) => {
